@@ -8,68 +8,92 @@
 
   <h2>1. iOS Application and Swift Basic</h2>
   <ul>
-    <li><input type="checkbox"> Model-View-Controller (MVC)</li>
-    <li><input type="checkbox"> Interface Builder</li>
-    <li><input type="checkbox"> Creating the Model Layer</li>
-    <li><input type="checkbox"> Swift Programming Basics</li>
-    <li><input type="checkbox"> The View Hierarchy</li>
-    <li><input type="checkbox"> Views and Frames</li>
-    <li><input type="checkbox"> The Auto Layout System</li>
+    <li><input type="checkbox" id="mvc"> Model-View-Controller (MVC)</li>
+    <li><input type="checkbox" id="interfaceBuilder"> Interface Builder</li>
+    <li><input type="checkbox" id="modelLayer"> Creating the Model Layer</li>
+    <li><input type="checkbox" id="swiftBasics"> Swift Programming Basics</li>
+    <li><input type="checkbox" id="viewHierarchy"> The View Hierarchy</li>
+    <li><input type="checkbox" id="viewsAndFrames"> Views and Frames</li>
+    <li><input type="checkbox" id="autoLayout"> The Auto Layout System</li>
   </ul>
 
   <h2>2. Interface Design</h2>
   <ul>
-    <li><input type="checkbox"> Basic UI with Object Library</li>
-    <li><input type="checkbox"> Delegation</li>
-    <li><input type="checkbox"> The View of View Controller</li>
-    <li><input type="checkbox"> Setting the Initial View Controller</li>
-    <li><input type="checkbox"> UITabBarController</li>
-    <li><input type="checkbox"> Loaded and Appearing Views</li>
-    <li><input type="checkbox"> Interacting with View Controllers and their Views</li>
-    <li><input type="checkbox"> Creating View Programmatically</li> 
+    <li><input type="checkbox" id="basicUI"> Basic UI with Object Library</li>
+    <li><input type="checkbox" id="delegation"> Delegation</li>
+    <li><input type="checkbox" id="viewControllerView"> The View of View Controller</li>
+    <li><input type="checkbox" id="initialViewController"> Setting the Initial View Controller</li>
+    <li><input type="checkbox" id="tabBarController"> UITabBarController</li>
+    <li><input type="checkbox" id="loadedViews"> Loaded and Appearing Views</li>
+    <li><input type="checkbox" id="interactingVC"> Interacting with View Controllers and their Views</li>
+    <li><input type="checkbox" id="creatingViews"> Creating View Programmatically</li> 
   </ul>
 
   <h2>3. Table View</h2>
   <ul>
-    <li><input type="checkbox"> UITableViewController</li>
-    <li><input type="checkbox"> UITableView’s Data Source</li>
-    <li><input type="checkbox"> UITableViewCells</li>
-    <li><input type="checkbox"> Editing UITable View</li>
-    <li><input type="checkbox"> Subclassing UITableViewCell</li>
+    <li><input type="checkbox" id="tableViewController"> UITableViewController</li>
+    <li><input type="checkbox" id="tableViewDataSource"> UITableView’s Data Source</li>
+    <li><input type="checkbox" id="tableViewCells"> UITableViewCells</li>
+    <li><input type="checkbox" id="editingTableView"> Editing UITable View</li>
+    <li><input type="checkbox" id="subclassingCell"> Subclassing UITableViewCell</li>
   </ul>
 
   <h2>4. Navigation, Touch and Gesture</h2>
   <ul>
-    <li><input type="checkbox"> UINavigationController</li>
-    <li><input type="checkbox"> Navigating with UINavigationController</li>
-    <li><input type="checkbox"> Appearing and Disappearing Views</li>
-    <li><input type="checkbox"> Managing the Keyboard</li>
-    <li><input type="checkbox"> UINavigationBar</li>
-    <li><input type="checkbox"> Camera</li>
-    <li><input type="checkbox"> Touch Event</li>
-    <li><input type="checkbox"> UIGestureRecognizer Subclass</li>
-    <li><input type="checkbox"> Multiple Gesture Recognizer</li>
-    <li><input type="checkbox"> UIMenuController</li>
-  </ul>
+    <li><input type="checkbox" id="navController"> UINavigationController</li>
+    <li><input type="checkbox" id="navWithNavController"> Navigating with UINavigationController</li>
+    <li><input type="checkbox" id="viewTransitions"> Appearing and Disappearing Views</li>
+    <li><input type="checkbox" id="keyboard"> Managing the Keyboard</li>
+    <li><input type="checkbox" id="navBar"> UINavigationBar</li>
+    <li><input type="checkbox" id="camera"> Camera</li>
+    <li><input type="checkbox" id="touchEvents"> Touch Event</li>
+    <li><input type="checkbox" id="gestureRecognizer"> UIGestureRecognizer Subclass</li>
+    <li><input type="checkbox" id="multipleGestures"> Multiple Gesture Recognizer</li>
+    <li><input type="checkbox" id="menuController"> UIMenuController</li>
+  </ul> 
 
   <h2>5. Collection View and Data Persistence</h2>
   <ul>
-    <li><input type="checkbox"> Application State and Transitions</li>
-    <li><input type="checkbox"> Writing to File System with Data and Error Handling</li>
-    <li><input type="checkbox"> Collection View</li>
-    <li><input type="checkbox"> Collection View Data Source</li>
-    <li><input type="checkbox"> Customizing Collection Layout</li>
-    <li><input type="checkbox"> Creating a Custom UICollectionViewCell</li>
-    <li><input type="checkbox"> Core Data and Relationships</li>
+    <li><input type="checkbox" id="appTransitions"> Application State and Transitions</li>
+    <li><input type="checkbox" id="dataFileSystem"> Writing to File System with Data and Error Handling</li>
+    <li><input type="checkbox" id="collectionView"> Collection View</li>
+    <li><input type="checkbox" id="collectionDataSource"> Collection View Data Source</li>
+    <li><input type="checkbox" id="customLayout"> Customizing Collection Layout</li>
+    <li><input type="checkbox" id="customCollectionCell"> Creating a Custom UICollectionViewCell</li>
+    <li><input type="checkbox" id="coreData"> Core Data and Relationships</li>
  </ul>
 
  <h2>6. Web Services</h2>
  <ul>
-   <li><input type="checkbox"> Use of Cocoa pods and Manage pods in Application.</li> 
-   <li><input type="checkbox"> Developing RESTful Web Services</li>
-   <li><input type="checkbox"> Sending the Request</li>
-   <li><input type="checkbox"> JSON Data</li>
+   <li><input type="checkbox" id="cocoaPods"> Use of Cocoa pods and Manage pods in Application.</li> 
+   <li><input type="checkbox" id="restfulWebServices"> Developing RESTful Web Services</li>
+   <li><input type="checkbox" id="sendRequest"> Sending the Request</li>
+   <li><input type="checkbox" id="jsonData"> JSON Data</li>
  </ul>
+<script>
+  // Function to load saved checkbox states
+  function loadCheckboxes() {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('checkbox_')) {
+        const checkboxId = key.substring(9); // Extract the ID from 'checkbox_' prefix
+        const isChecked = localStorage.getItem(key) === 'true';
+        document.getElementById(checkboxId).checked = isChecked;
+      }
+    }
+  }
+
+  // Function to save checkbox states
+  function saveCheckboxes() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      localStorage.setItem('checkbox_' + checkbox.id, checkbox.checked);
+    });
+  }
+
+  // Call the functions to handle saving and loading
+  window.addEventListener('load', loadCheckboxes);  // Load on page load
+  window.addEventListener('change', saveCheckboxes); // Save on checkbox change 
+</script>
 </body>
-<
-/html>
+</html>
