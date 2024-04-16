@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iOS Development Syllabus Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      margin: 30px;
+    }
+
+    h1, h2 {
+      color: #336699; /* A shade of blue */
+    }
+
+    ul {
+      list-style-type: disc; /* Use circle markers for the list */
+      margin-left: 30px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>iOS Syllabus</h1>
+
+  <h2>1. iOS Application and Swift Basic</h2>
+  <ul>
+    <li><label for="mvc">Model-View-Controller (MVC)</label> <input type="checkbox" id="mvc"></li>
+    <li><label for="interfaceBuilder">Interface Builder</label> <input type="checkbox" id="interfaceBuilder"></li>
+    <li><label for="modelLayer">Creating the Model Layer</label> <input type="checkbox" id="modelLayer"></li>
+    <li><label for="swiftBasics">Swift Programming Basics</label> <input type="checkbox" id="swiftBasics"></li>
+    <li><label for="viewHierarchy">The View Hierarchy</label> <input type="checkbox" id="viewHierarchy"></li>
+    <li><label for="viewsAndFrames">Views and Frames</label> <input type="checkbox" id="viewsAndFrames"></li>
+    <li><label for="autoLayout">The Auto Layout System</label> <input type="checkbox" id="autoLayout"></li>
+  </ul>
+
+  <h2>2. Interface Design</h2>
+  <ul>
+    <li><label for="basicUI">Basic UI with Object Library</label> <input type="checkbox" id="basicUI"></li>
+    <li><label for="delegation">Delegation</label> <input type="checkbox" id="delegation"></li>
+    <li><label for="viewControllerView">The View of View Controller</label> <input type="checkbox" id="viewControllerView"></li>
+    <li><label for="initialViewController">Setting the Initial View Controller</label> <input type="checkbox" id="initialViewController"></li>
+    <li><label for="tabBarController">UITabBarController</label> <input type="checkbox" id="tabBarController"></li>
+    <li><label for="loadedViews">Loaded and Appearing Views</label> <input type="checkbox" id="loadedViews"></li>
+    <li><label for="interactingVC">Interacting with View Controllers and their Views</label> <input type="checkbox" id="interactingVC"></li>
+    <li><label for="creatingViews">Creating View Programmatically</label> <input type="checkbox" id="creatingViews"></li> 
+  </ul>
+
+  <h2>3. Table View</h2>
+  <ul>
+    <li><label for="tableViewController">UITableViewController</label> <input type="checkbox" id="tableViewController"></li>
+    <li><label for="tableViewDataSource">UITableView’s Data Source</label> <input type="checkbox" id="tableViewDataSource"></li>
+    <li><label for="tableViewCells">UITableViewCells</label> <input type="checkbox" id="tableViewCells"></li>
+    <li><label for="editingTableView">Editing UITable View</label> <input type="checkbox" id="editingTableView"></li>
+    <li><label for="subclassingCell">Subclassing UITableViewCell</label> <input type="checkbox" id="subclassingCell"></li>
+  </ul>
+
+  <h2>4. Navigation, Touch and Gesture</h2>
+  <ul>
+    <li><label for="navController">UINavigationController</label> <input type="checkbox" id="navController"></li>
+    <li><label for="navWithNavController">Navigating with UINavigationController</label> <input type="checkbox" id="navWithNavController"></li>
+    <li><label for="viewTransitions">Appearing and Disappearing Views</label> <input type="checkbox" id="viewTransitions"></li>
+    <li><label for="keyboard">Managing the Keyboard</label> <input type="checkbox" id="keyboard"></li>
+    <li><label for="navBar">UINavigationBar</label> <input type="checkbox" id="navBar"></li>
+    <li><label for="camera">Camera</label> <input type="checkbox" id="camera"></li>
+    <li><label for="touchEvents">Touch Event</label> <input type="checkbox" id="touchEvents"></li>
+    <li><label for="gestureRecognizer">UIGestureRecognizer Subclass</label> <input type="checkbox" id="gestureRecognizer"></li>
+    <li><label for="multipleGestures">Multiple Gesture Recognizer</label> <input type="checkbox" id="multipleGestures"></li>
+    <li><label for="menuController">UIMenuController</label> <input type="checkbox" id="menuController"></li>
+  </ul> 
+
+  <h2>5. Collection View and Data Persistence</h2>
+  <ul>
+    <li><label for="appTransitions">Application State and Transitions</label> <input type="checkbox" id="appTransitions"></li>
+    <li><label for="dataFileSystem">Writing to File System with Data and Error Handling</label> <input type="checkbox" id="dataFileSystem"></li>
+    <li><label for="collectionView">Collection View</label> <input type="checkbox" id="collectionView"></li>
+    <li><label for="collectionDataSource">Collection View Data Source</label> <input type="checkbox" id="collectionDataSource"></li>
+    <li><label for="customLayout">Customizing Collection Layout</label> <input type="checkbox" id="customLayout"></li>
+    <li><label for="customCollectionCell">Creating a Custom UICollectionViewCell</label> <input type="checkbox" id="customCollectionCell"></li>
+    <li><label for="coreData">Core Data and Relationships</label> <input type="checkbox" id="coreData"></li>
+ </ul>
+
+ <h2>6. Web Services</h2>
+ <ul>
+   <li><label for="cocoaPods">Use of Cocoa pods and Manage pods in Application.</label> <input type="checkbox" id="cocoaPods"></li> 
+   <li><label for="restfulWebServices">Developing RESTful Web Services</label> <input type="checkbox" id="restfulWebServices"></li>
+   <li><label for="sendRequest">Sending the Request</label> <input type="checkbox" id="sendRequest"></li>
+   <li><label for="jsonData">JSON Data</label> <input type="checkbox" id="jsonData"></li>
+ </ul>
+<script>
+  // Function to load saved checkbox states
+  function loadCheckboxes() {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('checkbox_')) {
+        const checkboxId = key.substring(9); // Extract the ID from 'checkbox_' prefix
+        const isChecked = localStorage.getItem(key) === 'true';
+        document.getElementById(checkboxId).checked = isChecked;
+      }
+    }
+  }
+
+  // Function to save checkbox states
+  function saveCheckboxes() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      localStorage.setItem('checkbox_' + checkbox.id, checkbox.checked);
+    });
+  }
+
+  // Call the functions to handle saving and loading
+  window.addEventListener('load', loadCheckboxes);  // Load on page load
+  window.addEventListener('change', saveCheckboxes); // Save on checkbox change 
+</script>
+</body>
+</html>

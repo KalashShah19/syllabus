@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cloud Computing Syllabus Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1,
+        h2 {
+            color: #336699;
+            /* A shade of blue */
+        }
+
+        ul {
+            list-style-type: disc;
+            /* Use circle markers for the list */
+            margin-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CC </h1>
+    <ul>
+        <li><label for="IntroductiontoCloudComputing">Introduction to Cloud Computing</label> <input type="checkbox"
+                id="IntroductiontoCloudComputing"> [12 %]</li>
+        <ul>
+            <li><label for="CloudComputingataglance">Cloud Computing at a glance</label> <input type="checkbox"
+                    id="CloudComputingataglance"></li>
+            <li><label for="HistoricalDevelopments">Historical Developments</label> <input type="checkbox"
+                    id="HistoricalDevelopments"></li>
+            <li><label for="BuildingCloudComputingEnvironments">Building Cloud Computing Environments</label> <input
+                    type="checkbox" id="BuildingCloudComputingEnvironments"></li>
+            <li><label for="ComputingPlatformsandTechnologies">Computing Platforms and Technologies</label> <input
+                    type="checkbox" id="ComputingPlatformsandTechnologies"></li>
+        </ul>
+        <li><label for="PrinciplesofParallelandDistributedComputing">Principles of Parallel and Distributed
+                Computing</label> <input type="checkbox" id="PrinciplesofParallelandDistributedComputing"> [16 %]</li>
+        <ul>
+            <li><label for="ErasofComputing">Eras of Computing</label> <input type="checkbox" id="ErasofComputing"></li>
+            <li><label for="Parallelvs.DistributedComputing">Parallel vs. Distributed Computing</label> <input
+                    type="checkbox" id="Parallelvs.DistributedComputing"></li>
+            <li><label for="ElementsofParallelComputing">Elements of Parallel Computing</label> <input type="checkbox"
+                    id="ElementsofParallelComputing"></li>
+            <li><label for="ElementsofDistributedComputing">Elements of Distributed Computing</label> <input
+                    type="checkbox" id="ElementsofDistributedComputing"></li>
+            <li><label for="TechnologiesforDistributedComputing">Technologies for Distributed Computing</label> <input
+                    type="checkbox" id="TechnologiesforDistributedComputing"></li>
+        </ul>
+        <li><label for="VirtualizationandCloudComputingArchitecture">Virtualization and Cloud Computing
+                Architecture</label> <input type="checkbox" id="VirtualizationandCloudComputingArchitecture"> [22 %]
+        </li>
+        <ul>
+            <li><label for="IntroductiontoVirtualization">Introduction to Virtualization</label> <input type="checkbox"
+                    id="IntroductiontoVirtualization"></li>
+            <li><label for="CharacteristicsofVirtualizedEnvironments">Characteristics of Virtualized
+                    Environments</label> <input type="checkbox" id="CharacteristicsofVirtualizedEnvironments"></li>
+            <li><label for="TaxonomyofVirtualizationTechniques">Taxonomy of Virtualization Techniques</label> <input
+                    type="checkbox" id="TaxonomyofVirtualizationTechniques"></li>
+            <li><label for="VirtualizationandCloudComputing">Virtualization and Cloud Computing</label> <input
+                    type="checkbox" id="VirtualizationandCloudComputing"></li>
+            <li><label for="TechnologyExamples">Technology Examples</label> <input type="checkbox"
+                    id="TechnologyExamples"></li>
+            <li><label for="CloudReferenceModel">Cloud Reference Model</label> <input type="checkbox"
+                    id="CloudReferenceModel"></li>
+        </ul>
+        <li><label for="CloudTypes,ModelsandSLAManagement">Cloud Types, Models and SLA Management</label> <input
+                type="checkbox" id="CloudTypes,ModelsandSLAManagement"> [20 %]</li>
+        <ul>
+            <li><label for="TypesofCloud">Types of Cloud</label> <input type="checkbox" id="TypesofCloud"></li>
+            <li><label for="DeploymentModelsofcloud">Deployment Models of cloud</label> <input type="checkbox"
+                    id="DeploymentModelsofcloud"></li>
+            <li><label for="TraditionalapproachestoSLOManagement">Traditional approaches to SLO Management</label>
+                <input type="checkbox" id="TraditionalapproachestoSLOManagement"></li>
+            <li><label for="TypesofSLA">Types of SLA</label> <input type="checkbox" id="TypesofSLA"></li>
+            <li><label for="LifeCycleofSLA">Life Cycle of SLA</label> <input type="checkbox" id="LifeCycleofSLA"></li>
+            <li><label for="SLAManagementinCloud">SLA Management in Cloud</label> <input type="checkbox"
+                    id="SLAManagementinCloud"></li>
+            <li><label for="AutomatedPolicyBasedSLA">Automated Policy Based SLA</label> <input type="checkbox"
+                    id="AutomatedPolicyBasedSLA"></li>
+        </ul>
+        <li><label for="StorageandSecurityinCloud">Storage and Security in Cloud</label> <input type="checkbox"
+                id="StorageandSecurityinCloud"> [14 %]</li>
+        <ul>
+            <li><label for="DataStorageTechniques">Data Storage Techniques</label> <input type="checkbox"
+                    id="DataStorageTechniques"></li>
+            <li><label for="DataSecurityintheCloud">Data Security in the Cloud</label> <input type="checkbox"
+                    id="DataSecurityintheCloud"></li>
+            <li><label for="HostSecurityintheCloud">Host Security in the Cloud</label> <input type="checkbox"
+                    id="HostSecurityintheCloud"></li>
+        </ul>
+        <li><label for="CaseStudiesonOpenSourceCloudandCommercialCloud">Case Studies on Open Source Cloud and Commercial
+                Cloud</label> <input type="checkbox" id="CaseStudiesonOpenSourceCloudandCommercialCloud"> [16 %]</li>
+        <ul>
+            <li><label for="Eucalyptus">Eucalyptus</label> <input type="checkbox" id="Eucalyptus"></li>
+            <li><label for="OpenStack">Open Stack</label> <input type="checkbox" id="OpenStack"></li>
+            <li><label for="GoogleCloud">Google Cloud</label> <input type="checkbox" id="GoogleCloud"></li>
+            <li><label for="AmazonWebServices">Amazon Web Services</label> <input type="checkbox"
+                    id="AmazonWebServices"></li>
+        </ul>
+    </ul>
+
+    <script>
+        // Function to load saved checkbox states
+        function loadCheckboxes() {
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('checkbox_')) {
+                    const checkboxId = key.substring(9); // Extract the ID from 'checkbox_' prefix
+                    const isChecked = localStorage.getItem(key) === 'true';
+                    document.getElementById(checkboxId).checked = isChecked;
+                }
+            }
+        }
+
+        // Function to save checkbox states
+        function saveCheckboxes() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                localStorage.setItem('checkbox_' + checkbox.id, checkbox.checked);
+            });
+        }
+
+        // Call the functions to handle saving and loading
+        window.addEventListener('load', loadCheckboxes);  // Load on page load
+        window.addEventListener('change', saveCheckboxes); // Save on checkbox change 
+    </script>
+</body>
+
+</html>

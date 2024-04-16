@@ -1,0 +1,49 @@
+<bo>
+
+    <head>
+        <title>Generator</title>
+    </head>
+
+    <body>
+        <span id="output"> </span>
+        <script>
+            function convertTextToHTML(text) {
+                const lines = text.split('\n');
+                let html = '<ul>';
+
+                lines.forEach(line => {
+                    const labelRegex = /^(.*?)\s*\[(\d+\s*%)\s*\]$/; // Regular expression to match label and percentage
+
+                    const match = line.match(labelRegex);
+                    if (match) {
+                        const labelText = match[1].trim();
+                        const percentage = match[2].trim();
+                        const id = labelText.replace(/\s+/g, ''); // Generate an ID by removing whitespaces from label text
+
+                        html += `<li><label for="${id}">${labelText}</label> <input type="checkbox" id="${id}"> [${percentage}]</li>`;
+                    }
+                });
+
+                html += '</ul>';
+
+                return html;
+            }
+
+            // Example usage:
+            const text = `Model-View-Controller (MVC) [16 %]
+Interface Builder [17 %]
+Creating the Model Layer [17 %]
+Swift Programming Basics [16 %]
+The View Hierarchy [17 %]
+Views and Frames [17 %]
+The Auto Layout System [16 %]`;
+
+            const html = convertTextToHTML(text);
+            var output = document.getElementById("output");
+            output.innerHTML = html;
+            console.log(html);
+
+        </script>
+    </body>
+
+    </html>
